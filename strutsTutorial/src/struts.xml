@@ -9,8 +9,41 @@
      	 	<result name="success">/ex01.jsp</result>
      	 	<result name="failure">/err.jsp</result>
      	 </action>
+     	 
+     	 <action name="test02" class="com.struts.tutorial.action.TutorialAction02">
+     	 	<result>/ex02.jsp</result>
+     	 </action>
+     	 
+     	 <action name="test03" class="com.struts.tutorial.action.TutorialAction03">
+     	 	<result>/ex02.jsp</result>
+     	 </action>
+     	 
+     	 <action name="test04" class="com.struts.tutorial.action.TutorialAction04" method="actionRunner">
+     	 	<result>/ex01.jsp</result>
+     	 </action>
+     	 <action name="test05" class="com.struts.tutorial.action.TutorialAction04">
+     	 	<result>/ex01.jsp</result>
+     	 </action>
      	</package>
      
-     
+		<package name="ex02" extends="struts-default">
+			<action name="test11" class="com.struts.tutorial.action2.Action01">
+				<result name="success">/login/form.jsp</result>
+				<result name="error">/err.jsp</result>
+			</action>
+			<action name="test12" class="com.struts.tutorial.action2.Action02">
+				<result name="success">/login/result.jsp</result>
+				<result name="input">/login/form.jsp</result>
+				<result name="error">/err.jsp</result>
+			</action>
+		</package>     
      </struts>
+    
+    
+    
+    
+    
+    
+    
+    
     
