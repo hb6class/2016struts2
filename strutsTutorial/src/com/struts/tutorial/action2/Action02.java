@@ -14,7 +14,7 @@ public class Action02 implements Action {
 	public String getId() {
 		return id;
 	}
-	public String getMsg() {
+	public String getMsg() { 
 		return msg;
 	}
 	
