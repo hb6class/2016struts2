@@ -32,6 +32,28 @@ public class GuestDao {
 			}
 		});
 	}
+
+	public GuestVo selectOne(int sabun) {
+		String sql="select * from guest where sabun=?";
+		Object[] obj={sabun};
+		RowMapper mapper = new RowMapper() {
+			
+			@Override
+			public List<GuestVo> rowMapper(ResultSet rs) throws SQLException {
+				List<GuestVo> list = new ArrayList<GuestVo>();
+				while(rs.next()){
+					list.add(new GuestVo(
+							rs.getInt("sabun")
+							,rs.getString("name")
+							,rs.getDate("nalja")
+							,rs.getInt("pay")
+							));
+				}
+				return list;
+			}
+		};
+		return (GuestVo)new SqlTemplate().executeOne(sql, obj, mapper);
+	}
 	
 
 }

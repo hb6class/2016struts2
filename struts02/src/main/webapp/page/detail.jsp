@@ -19,27 +19,24 @@
 	<div class="container_12">
 		
 		<div class="grid_12">
-			<h1>리스트페이지</h1>
+			<h1>상세페이지</h1>
 		</div>
 		<div class="clear"></div>
+		<div class="grid_5">사번:</div>
+		<div class="grid_7">${bean.sabun }</div>
+		<div class="clear"></div>
+		<div class="grid_5">이름:</div>
+		<div class="grid_7">${bean.name }</div>
+		<div class="clear"></div>
+		<div class="grid_5">날짜:</div>
+		<div class="grid_7">${bean.nalja }</div>
+		<div class="clear"></div>
+		<div class="grid_5">금액:</div>
+		<div class="grid_7">${bean.pay }</div>
+		<div class="clear"></div>
 		<div class="grid_12">
-			<div class="container_12">
-				<div class="grid_3">사번</div>
-				<div class="grid_3">이름</div>
-				<div class="grid_3">날짜</div>
-				<div class="grid_3">금액</div>
-				<div class="clear"></div>
-			<c:forEach items="${list }" var="bean">
-				<a href="./detail.action?idx=${bean.sabun }">
-				<div class="grid_3">${bean.sabun }</div>
-				<div class="grid_3">${bean.name }</div>
-				<div class="grid_3">${bean.nalja }</div>
-				<div class="grid_3">${bean.pay }</div>
-				<div class="clear"></div>
-				</a>
-			</c:forEach>
-			</div>
-			
+			<a href="#">수 정</a>
+			<a href="#">삭 제</a>
 		</div>
 		<div class="clear"></div>
 		

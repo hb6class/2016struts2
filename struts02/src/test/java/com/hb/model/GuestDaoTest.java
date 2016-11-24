@@ -20,5 +20,23 @@ public class GuestDaoTest {
 			log.debug(vo);
 		}
 	}
-
+	@Test
+	public void testSelectOne(){
+		int sabun =1111;
+		GuestDao dao = new GuestDao();
+		GuestVo bean=dao.selectOne(sabun);
+		assertNotNull(bean);
+		assertEquals(sabun, bean.getSabun());
+		log.debug(bean);
+	}
 }
+
+
+
+
+
+
+
+
+
+
