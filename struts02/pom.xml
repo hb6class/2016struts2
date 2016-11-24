@@ -44,6 +44,11 @@
 	    <artifactId>ojdbc14</artifactId>
 	    <version>10.2.0.4.0</version>
 	</dependency>
+	<dependency>
+		<groupId>com.hb.sql</groupId>
+		<artifactId>myTemplate</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
   </dependencies>
   <build>
     <finalName>struts02</finalName>
