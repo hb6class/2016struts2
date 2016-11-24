@@ -68,6 +68,11 @@ public class GuestDao {
 		Object[] obj={bean.getName(),bean.getPay(),bean.getSabun()};
 		new SqlTemplate().executeUpdate(sql, obj);
 	}
+	public void deleteOne(int sabun) {
+		String sql = "delete from guest where sabun=?";
+		Object[] obj={sabun};
+		new SqlTemplate().executeUpdate(sql, obj);
+	}
 	
 
 }

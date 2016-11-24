@@ -36,7 +36,7 @@
 		<div class="clear"></div>
 		<div class="grid_12">
 			<a href="edit.action?idx=${bean.sabun }">수 정</a>
-			<a href="#">삭 제</a>
+			<a href="delete.action?idx=${bean.sabun }">삭 제</a>
 		</div>
 		<div class="clear"></div>
 		

@@ -23,6 +23,9 @@
 		<action name="update" class="com.hb.action.UpdateAction">
 			<result type="chain">list</result>			
 		</action>
+		<action name="delete" class="com.hb.action.DeleteAction">
+			<result type="chain">list</result>			
+		</action>
 	</package>
 
 </struts>

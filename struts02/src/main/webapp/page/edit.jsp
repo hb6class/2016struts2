@@ -19,7 +19,7 @@
 	<div class="container_12">
 		
 		<div class="grid_12">
-			<h1>입력페이지</h1>
+			<h1>수정페이지</h1>
 		</div>
 		<div class="clear"></div>
 		<form action="update.action">
