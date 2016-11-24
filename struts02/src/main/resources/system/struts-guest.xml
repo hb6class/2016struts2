@@ -20,6 +20,9 @@
 		<action name="edit" class="com.hb.action.DetailAction">
 			<result>/page/edit.jsp</result>
 		</action>
+		<action name="update" class="com.hb.action.UpdateAction">
+			<result type="chain">list</result>			
+		</action>
 	</package>
 
 </struts>

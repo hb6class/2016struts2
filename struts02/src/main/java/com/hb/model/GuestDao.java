@@ -62,6 +62,12 @@ public class GuestDao {
 				,bean.getName(),bean.getPay()};
 		new SqlTemplate().executeUpdate(sql, obj);
 	}
+
+	public void updateOne(GuestVo bean) {
+		String sql = "update guest set name=?,pay=? where sabun=?";
+		Object[] obj={bean.getName(),bean.getPay(),bean.getSabun()};
+		new SqlTemplate().executeUpdate(sql, obj);
+	}
 	
 
 }
