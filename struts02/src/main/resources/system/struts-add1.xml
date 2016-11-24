@@ -4,7 +4,10 @@
     "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-	<include file="system/struts-add1.xml"></include>
-	<include file="system/struts-guest.xml"></include>
+	<package name="default" extends="struts-default">
+		<action name="main" class="com.hb.action.IdxAction">
+			<result>/index.jsp</result>
+		</action>
+	</package>
 
 </struts>

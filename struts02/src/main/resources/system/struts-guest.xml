@@ -4,7 +4,10 @@
     "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-	<include file="system/struts-add1.xml"></include>
-	<include file="system/struts-guest.xml"></include>
+	<package name="ex1" namespace="/guest" extends="default">
+		<action name="list" class="com.hb.action.ListAction">
+			<result>/page/list.jsp</result>
+		</action>
+	</package>
 
 </struts>
