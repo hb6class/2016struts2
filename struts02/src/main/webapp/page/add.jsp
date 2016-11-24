@@ -19,32 +19,24 @@
 	<div class="container_12">
 		
 		<div class="grid_12">
-			<h1>리스트페이지</h1>
+			<h1>입력페이지</h1>
 		</div>
 		<div class="clear"></div>
-		<div class="grid_12">
-			<div class="container_12">
-				<div class="grid_3">사번</div>
-				<div class="grid_3">이름</div>
-				<div class="grid_3">날짜</div>
-				<div class="grid_3">금액</div>
-				<div class="clear"></div>
-			<c:forEach items="${list }" var="bean">
-				<a href="./detail.action?idx=${bean.sabun }">
-				<div class="grid_3">${bean.sabun }</div>
-				<div class="grid_3">${bean.name }</div>
-				<div class="grid_3">${bean.nalja }</div>
-				<div class="grid_3">${bean.pay }</div>
-				<div class="clear"></div>
-				</a>
-			</c:forEach>
-			</div>
-			
-		</div>
+		<form action="insert.action">
+		<div class="grid_5">사번:</div>
+		<div class="grid_7"><input type="text" name="sabun" /> </div>
+		<div class="clear"></div>
+		<div class="grid_5">이름:</div>
+		<div class="grid_7"><input type="text" name="name" /> </div>
+		<div class="clear"></div>
+		<div class="grid_5">금액:</div>
+		<div class="grid_7"><input type="text" name="pay" /> </div>
 		<div class="clear"></div>
 		<div class="grid_12">
-			<a href="add.action">입력</a>
+			<button type="submit">입 력</button>
+			<button type="reset">취 소</button>
 		</div>
+		</form>
 		<div class="clear"></div>
 		
 	</div>

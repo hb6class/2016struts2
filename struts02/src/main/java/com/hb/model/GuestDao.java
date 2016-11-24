@@ -54,6 +54,14 @@ public class GuestDao {
 		};
 		return (GuestVo)new SqlTemplate().executeOne(sql, obj, mapper);
 	}
+
+	public void insertOne(GuestVo bean) {
+		String sql="insert into guest values "
+				+ "(?,?,sysdate,?)";
+		Object[] obj={bean.getSabun()
+				,bean.getName(),bean.getPay()};
+		new SqlTemplate().executeUpdate(sql, obj);
+	}
 	
 
 }

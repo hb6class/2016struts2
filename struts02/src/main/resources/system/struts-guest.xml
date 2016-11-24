@@ -11,6 +11,19 @@
 		<action name="detail" class="com.hb.action.DetailAction">
 			<result>/page/detail.jsp</result>
 		</action>
+		<action name="add" class="com.hb.action.ShowAction">
+			<result>/page/add.jsp</result>
+		</action>
+		<action name="insert" class="com.hb.action.AddAction">
+			<result type="chain">list</result>
+		</action>
 	</package>
 
 </struts>
+
+
+
+
+
+
+
