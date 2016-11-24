@@ -17,6 +17,9 @@
 		<action name="insert" class="com.hb.action.AddAction">
 			<result type="chain">list</result>
 		</action>
+		<action name="edit" class="com.hb.action.DetailAction">
+			<result>/page/edit.jsp</result>
+		</action>
 	</package>
 
 </struts>

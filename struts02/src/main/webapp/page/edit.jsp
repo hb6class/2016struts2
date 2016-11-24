@@ -19,25 +19,24 @@
 	<div class="container_12">
 		
 		<div class="grid_12">
-			<h1>상세페이지</h1>
+			<h1>입력페이지</h1>
 		</div>
 		<div class="clear"></div>
+		<form action="update.action">
 		<div class="grid_5">사번:</div>
-		<div class="grid_7">${bean.sabun }</div>
+		<div class="grid_7"><input type="text" name="sabun" value="${bean.sabun }" /> </div>
 		<div class="clear"></div>
 		<div class="grid_5">이름:</div>
-		<div class="grid_7">${bean.name }</div>
-		<div class="clear"></div>
-		<div class="grid_5">날짜:</div>
-		<div class="grid_7">${bean.nalja }</div>
+		<div class="grid_7"><input type="text" name="name" value="${bean.name }" /> </div>
 		<div class="clear"></div>
 		<div class="grid_5">금액:</div>
-		<div class="grid_7">${bean.pay }</div>
+		<div class="grid_7"><input type="text" name="pay" value="${bean.pay }"/> </div>
 		<div class="clear"></div>
 		<div class="grid_12">
-			<a href="edit.action?idx=${bean.sabun }">수 정</a>
-			<a href="#">삭 제</a>
+			<button type="submit">수 정</button>
+			<button type="reset">취 소</button>
 		</div>
+		</form>
 		<div class="clear"></div>
 		
 	</div>
