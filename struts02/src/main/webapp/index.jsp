@@ -12,6 +12,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Hello World!</h2>
+	<h2>Hello ${msg } World!</h2>
 </body>
 </html>
