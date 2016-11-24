@@ -79,6 +79,34 @@ public class GuestDao {
 		}
 		return null;
 	}
+
+	public void updateOne(GuestVo bean) throws SQLException {
+		String sql ="update guest set name=?"
+				+ ",pay=? where sabun=?";
+		try{
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, bean.getName());
+			pstmt.setInt(2, bean.getPay());
+			pstmt.setInt(3, bean.getSabun());
+			pstmt.executeUpdate();
+		}finally{
+			if(pstmt!=null)pstmt.close();
+			if(conn!=null)conn.close();
+		}
+	}
+
+	public void deleteOne(int sabun) throws SQLException {
+		String sql ="delete from guest "
+				+ "where sabun=?";
+		try{
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, sabun);
+			pstmt.executeUpdate();
+		}finally{
+			if(pstmt!=null)pstmt.close();
+			if(conn!=null)conn.close();
+		}
+	}
 }
 
 
