@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.sun.org.apache.bcel.internal.generic.GETSTATIC;
+
 public class GuestDao {
 	
 	private String url="jdbc:oracle:thin:@localhost:1521:xe";
@@ -55,4 +57,38 @@ public class GuestDao {
 			if(conn!=null)conn.close();
 		}
 	}
+
+	public GuestVo selectOne(int sabun) throws SQLException {
+		String sql="select * from guest where sabun=?";
+		try{
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, sabun);
+			rs=pstmt.executeQuery();
+			if(rs.next()){
+				return new GuestVo(
+						rs.getInt("sabun")
+						,rs.getString("name")
+						,rs.getDate("nalja")
+						,rs.getInt("pay")
+						);
+			}	
+		}finally{
+			if(rs!=null)rs.close();
+			if(pstmt!=null)pstmt.close();
+			if(conn!=null)conn.close();
+		}
+		return null;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,5 @@
-<%@page import="java.util.List"%>
-<%@page import="com.hb.model.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% List<GuestVo> list = (List<GuestVo>)request.getAttribute("list"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,26 +12,35 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>리스트 페이지</h1>
+	<h1>상세페이지</h1>
 	<table>
-		<tr>
-			<th>사번</th>
-			<th>이름</th>
-			<th>날짜</th>
-			<th>금액</th>
-		</tr>
-		<% for(GuestVo vo:list){ %>
-		<tr>
-			<td><%=vo.getSabun() %></td>
-			<td><a href="detail.action?idx=<%=vo.getSabun() %>"><%=vo.getName() %></a></td>
-			<td><%=vo.getNalja() %></td>
-			<td><%=vo.getPay() %></td>
-		</tr>
-		<%} %>
+	<tr>
+		<td>sabun</td>
+		<td>${bean.sabun}</td>
+	</tr>
+	<tr>
+		<td>name</td>
+		<td>${bean.name}</td>
+	</tr>
+	<tr>
+		<td>nalja</td>
+		<td>${bean.nalja }</td>
+	</tr>
+	<tr>
+		<td>pay</td>
+		<td>${bean.pay }</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<a href="#">수정</a>
+			<a href="#">삭제</a>
+		</td>
+	</tr>
 	</table>
-	<p><a href="add.action">입력</a></p>
 </body>
 </html>
+
+
 
 
 

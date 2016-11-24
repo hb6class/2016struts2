@@ -21,11 +21,11 @@
 		</tr>
 		<tr>
 			<td>이름</td>
-			<td><input type="text" name="name" /> </td>
+			<td><input type="text" name="name" />${fieldErrors.name }</td>
 		</tr>
 		<tr>
 			<td>금액</td>
-			<td><input type="text" name="pay" /> </td>
+			<td><input type="text" name="pay" />${fieldErrors.pay }</td>
 		</tr>
 		<tr>
 			<td colspan="2">
