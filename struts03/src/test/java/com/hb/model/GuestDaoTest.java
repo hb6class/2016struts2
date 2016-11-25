@@ -36,6 +36,16 @@ public class GuestDaoTest {
 		assertEquals(sabun, bean.getSabun());
 		log.debug(bean);
 	}
+	@Test
+	public void testInsertOne() throws SQLException{
+		GuestVo bean = new GuestVo();
+		bean.setSabun(8888);
+		bean.setName("test");
+		bean.setNalja(null);
+		bean.setPay(8000);
+		dao.insertOne(bean);
+		assertEquals(bean, dao.selectOne(8888));
+	}
 }
 
 

@@ -7,6 +7,9 @@
 	<select id="selectOne" parameterClass="int" resultClass="com.hb.model.GuestVo">
 	select * from guest where sabun=#value#
 	</select>
+	<insert id="insertOne" parameterClass="com.hb.model.GuestVo">
+	insert into guest (sabun,name,nalja,pay) values (#sabun#,#name#,sysdate,#pay#)
+	</insert>
 </sqlMap>
 
 

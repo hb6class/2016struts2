@@ -11,6 +11,13 @@
 		<action name="detail" class="com.hb.action.OneAction">
 			<result>/guest/detail.jsp</result>
 		</action>
+		<action name="add" class="com.hb.action.AddAction" method="pShow">
+			<result name="input">/guest/addform.jsp</result>
+		</action>
+		<action name="insert" class="com.hb.action.AddAction">
+			<result name="input">/guest/addform.jsp</result>
+			<result type="chain" name="success">list</result>
+		</action>
 	</package>
 
 </struts>

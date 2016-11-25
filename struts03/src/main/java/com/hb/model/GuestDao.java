@@ -32,4 +32,8 @@ public class GuestDao {
 		return bean;
 	}
 
+	public void insertOne(GuestVo bean) throws SQLException {
+		sqlMap.insert("insertOne", bean);
+	}
+
 }
