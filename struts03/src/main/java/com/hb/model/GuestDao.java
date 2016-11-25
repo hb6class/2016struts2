@@ -27,4 +27,9 @@ public class GuestDao {
 		return list;
 	}
 
+	public GuestVo selectOne(int sabun) throws SQLException {
+		GuestVo bean=(GuestVo)sqlMap.queryForObject("selectOne",sabun);
+		return bean;
+	}
+
 }

@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,27 +19,37 @@
 		<a href="/struts/user/login.action">LOGIN</a>
 	</div>
 	<div>
-		<h1>리스트페이지</h1>
+		<h1>상세페이지</h1>
 		<table>
 			<tr>
-				<th>사번</th>
-				<th>이름</th>
-				<th>날짜</th>
-				<th>금액</th>
-			</tr>
-			<c:forEach items="${list }" var="bean">
-			<tr>
+				<td>사번</td>
 				<td>${bean.sabun }</td>
-				<td><a href="detail.action?idx=${bean.sabun }">${bean.name }</a></td>
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td>${bean.name }</td>
+			</tr>
+			<tr>
+				<td>날짜</td>
 				<td>${bean.nalja }</td>
+			</tr>
+			<tr>
+				<td>금액</td>
 				<td>${bean.pay }</td>
 			</tr>
-			</c:forEach>
+			<tr>
+				<td colspan="2">
+					<a href="#">수정</a>
+					<a href="#">삭제</a>
+				</td>
+			</tr>
+		
 		</table>
 	</div>
-
 </body>
 </html>
+
+
 
 
 

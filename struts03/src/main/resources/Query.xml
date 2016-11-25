@@ -4,7 +4,9 @@
 	<select id="selectAll" resultClass="com.hb.model.GuestVo">
 	select * from guest order by sabun	
 	</select>
-
+	<select id="selectOne" parameterClass="int" resultClass="com.hb.model.GuestVo">
+	select * from guest where sabun=#value#
+	</select>
 </sqlMap>
 
 

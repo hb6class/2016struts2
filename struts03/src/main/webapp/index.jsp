@@ -13,5 +13,6 @@
 </head>
 <body>
 	<h1>Hello World</h1>
+	<p><a href="/struts03/list.action" >입 장</a></p>
 </body>
 </html>

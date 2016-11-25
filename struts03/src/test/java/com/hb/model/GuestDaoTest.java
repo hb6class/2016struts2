@@ -28,5 +28,20 @@ public class GuestDaoTest {
 			log.debug(vo);
 		}
 	}
-
+	@Test
+	public void testSelectOne() throws SQLException{
+		int sabun =1111;
+		GuestVo bean=dao.selectOne(sabun);
+		assertNotNull(bean);
+		assertEquals(sabun, bean.getSabun());
+		log.debug(bean);
+	}
 }
+
+
+
+
+
+
+
+
