@@ -18,6 +18,13 @@
 			<result name="input">/guest/addform.jsp</result>
 			<result type="chain" name="success">list</result>
 		</action>
+		<action name="edit" class="com.hb.action.OneAction">
+			<result>/guest/editform.jsp</result>
+		</action>
+		<action name="update" class="com.hb.action.UpdateAction">
+			<result name="input">/guest/editform.jsp</result>
+			<result type="chain">list</result>
+		</action>
 	</package>
 
 </struts>

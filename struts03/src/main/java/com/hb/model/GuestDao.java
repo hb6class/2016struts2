@@ -35,5 +35,9 @@ public class GuestDao {
 	public void insertOne(GuestVo bean) throws SQLException {
 		sqlMap.insert("insertOne", bean);
 	}
-
+	
+	public void updateOne(GuestVo bean) throws SQLException{
+		sqlMap.update("updateOne", bean);
+	} 
+	
 }

@@ -38,13 +38,27 @@ public class GuestDaoTest {
 	}
 	@Test
 	public void testInsertOne() throws SQLException{
+//		GuestVo bean = new GuestVo();
+//		bean.setSabun(8888);
+//		bean.setName("test");
+//		bean.setNalja(null);
+//		bean.setPay(8000);
+//		dao.insertOne(bean);
+//		assertEquals(bean, dao.selectOne(8888));
+	}
+	
+	@Test
+	public void testUpdateOne() throws SQLException {
 		GuestVo bean = new GuestVo();
 		bean.setSabun(8888);
-		bean.setName("test");
-		bean.setNalja(null);
-		bean.setPay(8000);
-		dao.insertOne(bean);
-		assertEquals(bean, dao.selectOne(8888));
+		bean.setName("test2");
+		bean.setPay(8080);
+//		assertNotEquals(bean,dao.selectOne(8888));
+		dao.updateOne(bean);
+		GuestVo vo=dao.selectOne(8888);
+		assertNotNull(vo);
+		assertEquals(bean, vo);
+		log.debug(vo);
 	}
 }
 

@@ -19,32 +19,29 @@
 		<a href="/struts/user/login.action">LOGIN</a>
 	</div>
 	<div>
-		<h1>상세페이지</h1>
+		<h1>수정페이지</h1>
+		<form action="update.action" method="post">
 		<table>
 			<tr>
-				<td>사번</td>
-				<td>${bean.sabun }</td>
+				<td><label for="sabun">사번</label></td>
+				<td><input type="text" value="${bean.sabun }" name="sabun" id="sabun" /> </td>
 			</tr>
 			<tr>
-				<td>이름</td>
-				<td>${bean.name }</td>
+				<td><label for="name">이름</label></td>
+				<td><input type="text" value="${bean.name }" name="name" id="name"/> </td>
 			</tr>
 			<tr>
-				<td>날짜</td>
-				<td>${bean.nalja }</td>
-			</tr>
-			<tr>
-				<td>금액</td>
-				<td>${bean.pay }</td>
+				<td><label for="pay">금액</label></td>
+				<td><input type="text" value="${bean.pay }" name="pay" id="pay"/> </td>
 			</tr>
 			<tr>
 				<td colspan="2">
-					<a href="edit.action?idx=${bean.sabun }">수정</a>
-					<a href="#">삭제</a>
+					<button type="submit">수 정</button>
+					<button type="reset">취 소</button>
 				</td>
 			</tr>
-		
 		</table>
+		</form>
 	</div>
 </body>
 </html>
